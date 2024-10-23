@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline{
+    width: 70%;
+    height: 60px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.text{
+    display: flex;
+    margin: 60px;
+    gap: 20px;
+}
+.timeline_hr{
+color: #8c8c8c; 
+}
+
+.container{
+    position: relative;
+}
+
+.timeline_duration{
+    position: absolute;
+}
