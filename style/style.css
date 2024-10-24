@@ -1,28 +1,80 @@
-*{
+*
+{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
-
-.timeline{
-    width: 70%;
-    height: 60px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+body
+{
+    height: 100vh;
+    overflow: scroll;
 }
-.text{
+header
+{
     display: flex;
-    margin: 60px;
-    gap: 20px;
+    width: 80%;
+    margin:1.5% auto;
+    align-items: baseline;
 }
-.timeline_hr{
-color: #8c8c8c; 
+header div
+{
+    font-size: 18px;
+    color:#222;
 }
-
-.container{
+header span
+{
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 10px;
+}
+main
+{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 100vh;    
+    justify-content: center;  
+}
+#timeSeries
+{
     position: relative;
 }
-
-.timeline_duration{
+.schedule_wrapper
+{
+    width: 10%;
+   
+}
+.time_column
+{
+    border-top: 1px solid black;
+    color:#999;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 60px;
+    
+}
+.time_column span
+{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.sub_time
+{
+    font-size: 11px;
+    margin:auto 0;
+}
+.time_table
+{
+    width: 85%;
+    height: 60px;
+}
+.time_display
+{
+    border-left: 2px solid blue;
     position: absolute;
+    font-size: 8px;
+    color: #464646;
+    background-color:rgb(185, 208, 229);
+    box-sizing: border-box;
 }

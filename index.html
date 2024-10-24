@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <script src="./script/script.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="text">
-      <div class="timeschedule_text">Time Schedule</div>
-       <div class="timeschedule_time">8:00 am - 6:00 pm</div>
-    </div>
-   <div class="container">
-      <div class="timeline">
-        <span class="timeline_hr">8:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">9:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">10:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">11:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">12:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">1:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">2:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">3:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">4:00</span>
-      </div>
-      <div class="timeline">
-         <span class="timeline_hr">5:00</span>
-      </div>
-   </div>
-  
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Style/style.css">
+    </head>
+    <body>
+        <header>
+            <div>Time Schedule</div>
+            <span>8:00 am - 6:00 pm</span>
+        </header>
+        <main>
+            <div class="schedule_wrapper">
+                <div class="time_column">
+                    <span>8:00</span>
+                    <span class="sub_time">8:30</span>
+                </div>
+                <div class="time_column">
+                    <span>9:00</span>
+                    <span class="sub_time">9:30</span>
+                </div>
+                <div class="time_column">
+                    <span>10:00</span>
+                    <span class="sub_time">10:30</span>
+                </div>
+                <div class="time_column">
+                    <span>11:00</span>
+                    <span class="sub_time">11:30</span>
+                </div>
+                <div class="time_column">
+                    <span>12:00</span>
+                    <span class="sub_time">12:30</span>
+                </div>
+                <div class="time_column">
+                    <span>1:00</span>
+                    <span class="sub_time">1:30</span>
+                </div>
+                <div class="time_column">
+                    <span>2:00</span>
+                    <span class="sub_time">2:30</span>
+                </div>
+                <div class="time_column">
+                    <span>3:00</span>
+                    <span class="sub_time">3:30</span>
+                </div>
+                <div class="time_column">
+                    <span>4:00</span>
+                    <span class="sub_time">4:30</span>
+                </div>
+                <div class="time_column">
+                    <span>5:00</span>
+                    <span class="sub_time">5:30</span>
+                </div>
+            </div>
+            <div class="time_table" id="timeSeries">
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+                <div class="time_column"></div>
+            </div>
+        </main>
+        <script src="script/script.js"></script>
+        
+    </body>
 </html>

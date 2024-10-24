@@ -1,7 +1,7 @@
-var initialTime = 480;
+
 
 var data = [{
-start: 0,
+start:0,
 duration: 15,
 title: "Exercise"
 }, {
@@ -13,7 +13,7 @@ start: 30,
 duration: 30,
 title: "Plan day"
 }, {
-start: 60,
+start: 10,
 duration: 15,
 title: "Review yesterday's commits"
 }, {
@@ -38,37 +38,51 @@ duration: 30,
 title: "Push up branch"
 }];
 
-document.addEventListener("DOMContentLoaded", function() {
-for (let i = 0; i < data.length; i++) {
-var obj = data[i];
-var startMinutes = initialTime + obj.start;
-var endTime = startMinutes + obj.duration;
-var duration = endTime - startMinutes;
 
-var divElement = document.createElement("div");
-divElement.style.width = "80%";
-divElement.style.height = duration + "px"; 
-divElement.style.background = "#d1e4fb";
-divElement.style.fontSize="10px"
-divElement.style.borderLeft="2px solid blue";
-divElement.innerHTML = obj.title;
-// divElement.style.margin="10px";
-divElement.class='timeline_duration'
 
-document.body.appendChild(divElement);
-//  if(i!=0)
-//   {
-    var nextobj=data[i+1];
-    var next_startMinutes = initialTime + nextobj.start;
-    // var next_endTime =  next_startMinutes + nextobj.duration;
-
-    var gap= next_startMinutes-endTime;
-    var divGapElement = document.createElement("div");
-    divGapElement.style.width = "80%";
-    divGapElement.style.height = gap + "px"; 
-    divGapElement.style.background = "#fff";
-    document.body.appendChild(divGapElement);
-//   }
+for(i=0;i<data.length;i++)
+{
+  for(j=0;j<(data.length-1-i);j++)
+  {
+    if(Number(data[j].start)>Number(data[j+1].start))
+    {
+      temp=data[j];
+      data[j]=data[j+1]
+      data[j+1]=temp;
+    }
+  }
 }
-
-});
+flag=1;
+widthRatio=1;
+for(i=0;i<data.length;i++)
+{
+  var div = document.createElement("div");
+  height = data[i].duration + "px";
+  div.style.height = height;
+  startingTime=data[i].start+"px";
+  div.style.top = startingTime;
+  div.innerHTML = data[i].title;
+  div.classList.add("time_display");
+  if((i<data.length-1 && Number(data[i].start+data[i].duration)>Number(data[i+1].start)) || (i>0 && Number(data[i-1].start+data[i-1].duration)>Number(data[i].start)))
+  {
+    left=(45)*flag + "%";
+    div.style.left=left;
+    if(flag==1)
+    {
+      flag=0;
+    }
+    else
+    {
+      flag=1;
+    }
+    widthRatio=2;
+  }
+  else
+  {
+    flag=1;
+    widthRatio=1;
+  }
+  width=(90/widthRatio)+"%"
+  div.style.width=width;
+  document.getElementById("timeSeries").appendChild(div);
+}
