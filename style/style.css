@@ -47,7 +47,7 @@ main
 .time_column
 {
     border-top: 1px solid black;
-    color:#999;
+    color:#928282;
     display: flex;
     flex-direction: column;
     font-size: 14px;
@@ -75,6 +75,6 @@ main
     position: absolute;
     font-size: 8px;
     color: #464646;
-    background-color:rgb(185, 208, 229);
+    background-color:rgb(235, 185, 185);
     box-sizing: border-box;
 }
